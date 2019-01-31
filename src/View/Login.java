@@ -70,7 +70,6 @@ public class Login extends javax.swing.JFrame {
 
         ButtonEntrar.setBackground(new java.awt.Color(164, 152, 152));
         ButtonEntrar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        ButtonEntrar.setForeground(new java.awt.Color(0, 0, 0));
         ButtonEntrar.setText("Entrar");
         ButtonEntrar.setActionCommand("ButtonEntrar");
         ButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
