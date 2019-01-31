@@ -25,13 +25,13 @@ public class Main {
         Servico barba = new Servico(1, "Barba", 10);
         
         System.out.println(barba.getDescricao());
-        System.out.println(barba.getValor());
+        System.out.println(barba);
         
-        Cliente cliente = new Cliente(1, "Igor", 'M', "99925181", "Rua 50, numero 5050");
+        Cliente cliente = new Cliente(1, "Igor", "Rua 50, numero 5050", "958284811");
         
         System.out.println(cliente);
         
-        Usuario usuario = new Usuario(1, "Barbeiro", "senha");
+        Usuario usuario = new Usuario(1, "Barbeiro", "Senha");
         System.out.println(usuario);
     }
     

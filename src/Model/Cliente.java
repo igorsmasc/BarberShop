@@ -6,88 +6,26 @@
 package Model;
 
 import java.util.Date;
-import java.util.logging.Logger;
 
 /**
  *
  * @author igors
  */
-public class Cliente {
+public class Cliente extends Pessoa {
     
-    private Integer id;
-    private String nome;
-    private char sexo;
-    private Date dataNascimento;
-    private String telefone;
-    private String email;
     private String enderenco;
     private String cep;
 
-    public Cliente(Integer id, String nome, char sexo, Date dataNascimento, String telefone, String email, String enderenco, String cep) {
-        this.id = id;
-        this.nome = nome;
-        this.sexo = sexo;
-        this.dataNascimento = dataNascimento;
-        this.telefone = telefone;
-        this.email = email;
+    public Cliente(Integer id, String nome, String enderenco, String cep) {
+        super(id, nome);
         this.enderenco = enderenco;
         this.cep = cep;
     }
-
-    public Cliente(Integer id, String nome, char sexo, String telefone, String enderenco) {
-        this.id = id;
-        this.nome = nome;
-        this.sexo = sexo;
-        this.telefone = telefone;
+    
+    public Cliente(String enderenco, String cep, Integer id, String nome, char sexo, Date dataNascimento, String telefone, String email, String rg) {
+        super(id, nome, sexo, dataNascimento, telefone, email, rg);
         this.enderenco = enderenco;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public char getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(char sexo) {
-        this.sexo = sexo;
-    }
-
-    public Date getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
+        this.cep = cep;
     }
 
     public String getEnderenco() {
@@ -105,9 +43,9 @@ public class Cliente {
     public void setCep(String cep) {
         this.cep = cep;
     }
+
     
-    
-    
-    
+ 
     
 }
+    
