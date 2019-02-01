@@ -5,6 +5,7 @@
  */
 package View;
 
+import Model.Agendamento;
 import Model.Cliente;
 import Model.Servico;
 import Model.Usuario;
@@ -33,6 +34,8 @@ public class Main {
         
         Usuario usuario = new Usuario(1, "Barbeiro", "Senha");
         System.out.println(usuario);
+        
+        Agendamento agendamento = new Agendamento(1, cliente, barba, barba.getValor(), "09/02/2019");
     }
     
 }
