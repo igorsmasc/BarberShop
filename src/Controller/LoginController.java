@@ -19,6 +19,7 @@ import View.MenuPrincipal;
 public class LoginController {
     private final Login view;
     private LoginHelper helper;
+    private Usuario usuarioAutenticado;
     
 
     public LoginController(Login view) {
@@ -32,7 +33,7 @@ public class LoginController {
         
         //Pesquisar o Usuário no banco
         UsuarioDAO usuarioDAO = new UsuarioDAO();
-        Usuario usuarioAutenticado = usuarioDAO.selectPorNomeESenha(usuario);
+        this.usuarioAutenticado = usuarioDAO.selectPorNomeESenha(usuario);
         
         //Se o usuario da view tiver o mesmo usuario e senha do banco direcionar para menu
         // Senão mostrar mensagem ao usuário "Usuário ou senha inválidos"
@@ -53,5 +54,15 @@ public class LoginController {
         
         this.view.exibeMensagem("Executei ou fiz tarefa");
     }
+
+    public Usuario getUsuarioAutenticado() {
+        return usuarioAutenticado;
+    }
+
+    public void setUsuarioAutenticado(Usuario usuarioAutenticado) {
+        this.usuarioAutenticado = usuarioAutenticado;
+    }
+    
+    
     
 }

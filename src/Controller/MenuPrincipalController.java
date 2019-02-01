@@ -5,7 +5,9 @@
  */
 package Controller;
 
+import Model.Usuario;
 import View.Agenda;
+import View.Login;
 import View.MenuPrincipal;
 
 /**
@@ -23,6 +25,12 @@ public class MenuPrincipalController {
     public void navegarParaAgenda(){
         Agenda agenda = new Agenda();
         agenda.setVisible(true);
+    }
+    
+    public void logoffUsuario(){
+        Login login = new Login();
+        login.setVisible(true);
+        this.view.dispose();
     }
     
 }
