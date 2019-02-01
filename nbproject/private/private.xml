@@ -3,13 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/igors/Desktop/Workspace%20-%20Barbearia/BarberShop/src/Model/Servico.java</file>
             <file>file:/C:/Users/igors/Desktop/Workspace%20-%20Barbearia/BarberShop/src/View/MenuPrincipal.java</file>
-            <file>file:/C:/Users/igors/Desktop/Workspace%20-%20Barbearia/BarberShop/src/Model/Cliente.java</file>
-            <file>file:/C:/Users/igors/Desktop/Workspace%20-%20Barbearia/BarberShop/src/View/Main.java</file>
-            <file>file:/C:/Users/igors/Desktop/Workspace%20-%20Barbearia/BarberShop/src/View/Agenda.java</file>
-            <file>file:/C:/Users/igors/Desktop/Workspace%20-%20Barbearia/BarberShop/src/Model/Usuario.java</file>
-            <file>file:/C:/Users/igors/Desktop/Workspace%20-%20Barbearia/BarberShop/src/View/Login.java</file>
+            <file>file:/C:/Users/igors/Desktop/Workspace%20-%20Barbearia/BarberShop/src/Controller/MenuPrincipalController.java</file>
+            <file>file:/C:/Users/igors/Desktop/Workspace%20-%20Barbearia/BarberShop/src/Controller/LoginController.java</file>
         </group>
     </open-files>
 </project-private>

@@ -39,7 +39,6 @@ public abstract class Pessoa {
         } catch (ParseException ex) {
             Logger.getLogger(Pessoa.class.getName()).log(Level.SEVERE, null, ex);
         }
-;
         this.telefone = telefone;
         this.email = email;
         this.rg = rg;
