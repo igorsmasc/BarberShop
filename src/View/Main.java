@@ -35,7 +35,7 @@ public class Main {
         Usuario usuario = new Usuario(1, "Barbeiro", "Senha");
         System.out.println(usuario);
         
-        Agendamento agendamento = new Agendamento(1, cliente, barba, barba.getValor(), "09/02/2019");
+        Agendamento agendamento = new Agendamento(1, cliente, barba, barba.getValor(), "09/02/2019 10:10");
     }
     
 }

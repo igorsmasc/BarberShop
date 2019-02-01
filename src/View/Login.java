@@ -5,17 +5,22 @@
  */
 package View;
 
+import Controller.LoginController;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author tiago
  */
 public class Login extends javax.swing.JFrame {
+    private final LoginController controller;
 
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        controller = new LoginController(this);
     }
 
     /**
@@ -93,7 +98,11 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_TextUsuarioActionPerformed
 
     private void ButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonEntrarActionPerformed
-        // TODO add your handling code here:
+        //executa quando clico no botão
+        //controller.fizTarefa();
+        this.controller.fizTarefa();
+        System.out.println(TextUsuario.getText()); //Usuario
+        System.out.println(TextSenha.getText()); //Senha
     }//GEN-LAST:event_ButtonEntrarActionPerformed
 
     private void TextSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextSenhaActionPerformed
@@ -145,4 +154,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField TextSenha;
     private javax.swing.JTextField TextUsuario;
     // End of variables declaration//GEN-END:variables
+
+    public void exibeMensagem(String mensagem) {
+        JOptionPane.showMessageDialog(null, mensagem);
+    }
 }
