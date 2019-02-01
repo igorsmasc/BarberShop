@@ -6,6 +6,7 @@
 package View;
 
 import Controller.AgendaController;
+import javax.swing.JTable;
 
 /**
  *
@@ -21,6 +22,7 @@ public class Agenda extends javax.swing.JFrame {
     public Agenda() {
         initComponents();
         controller = new AgendaController(this);
+        iniciar();
     }
 
     /**
@@ -141,13 +143,10 @@ public class Agenda extends javax.swing.JFrame {
 
         TableAgendamentos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"1", "Alan", "Corte", "10", "22/04/2018", "08:00", ""},
-                {"2", "Abigail", "Barba", "20", "22/04/2018", "09:00", "Pode se Atrazar um pouco"},
-                {"3", "Pedro", "Barba", "20", "23/04/2018", "08:00", null},
-                {"4", "Teste", "Barba + Corte", "30", "23/04/2018", "09:00", null}
+
             },
             new String [] {
-                "Id", "Cliente", "Serviço", "Valor", "Data", "Hora", "Observação"
+                "Id", "Cliente", "Servico", "Valor", "Data", "Hora", "Observação"
             }
         ));
         jScrollPane1.setViewportView(TableAgendamentos);
@@ -248,4 +247,18 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
+
+    private void iniciar() {
+        this.controller.atualizaTabela();
+    }
+
+    public JTable getTableAgendamentos() {
+        return TableAgendamentos;
+    }
+
+    public void setTableAgendamentos(JTable TableAgendamentos) {
+        this.TableAgendamentos = TableAgendamentos;
+    }
+    
+    
 }

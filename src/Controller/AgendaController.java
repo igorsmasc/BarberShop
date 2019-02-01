@@ -5,8 +5,12 @@
  */
 package Controller;
 
+import Controller.Helper.AgendaHelper;
+import Model.Agendamento;
+import Model.DAO.AgendamentoDAO;
 import View.Agenda;
 import View.MenuPrincipal;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,9 +18,11 @@ import View.MenuPrincipal;
  */
 public class AgendaController {
     private final Agenda view;
+    private final AgendaHelper helper;
 
     public AgendaController(Agenda view) {
         this.view = view;
+        this.helper = new AgendaHelper(view);
     }
 
     public void voltarParaMenu(){
@@ -24,6 +30,16 @@ public class AgendaController {
         menu.setVisible(true);
         this.view.dispose();
      
+    }
+    
+    public void atualizaTabela(){
+        //Buscar lista com agendamentos do BD
+        AgendamentoDAO agendamentoDAO = new AgendamentoDAO();
+        ArrayList<Agendamento> agendamentos = agendamentoDAO.selectAll();
+        
+        //Exibir lista na view
+        helper.preencherTabela(agendamentos);
+        
     }
 
     
