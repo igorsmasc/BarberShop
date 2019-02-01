@@ -5,17 +5,22 @@
  */
 package View;
 
+import Controller.AgendaController;
+
 /**
  *
  * @author tiago
  */
 public class Agenda extends javax.swing.JFrame {
 
+    private final AgendaController controller;
+    
     /**
      * Creates new form Agenda
      */
     public Agenda() {
         initComponents();
+        controller = new AgendaController(this);
     }
 
     /**
@@ -46,6 +51,7 @@ public class Agenda extends javax.swing.JFrame {
         ButtonAgendar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TableAgendamentos = new javax.swing.JTable();
+        jButtonVoltar = new javax.swing.JButton();
         LabelAgendaPainelFundo = new javax.swing.JLabel();
         LabelAgendaFundo = new javax.swing.JLabel();
 
@@ -148,6 +154,16 @@ public class Agenda extends javax.swing.JFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 590, 1120, 330));
 
+        jButtonVoltar.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonVoltar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButtonVoltar.setText("Voltar");
+        jButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVoltarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 950, 90, 40));
+
         LabelAgendaPainelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Agenda-PainelFundo.png"))); // NOI18N
         getContentPane().add(LabelAgendaPainelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 990));
 
@@ -168,6 +184,10 @@ public class Agenda extends javax.swing.JFrame {
     private void TextValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TextValorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TextValorActionPerformed
+
+    private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
+        controller.voltarParaMenu();
+    }//GEN-LAST:event_jButtonVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,6 +244,7 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JTextArea TextObservacao;
     private javax.swing.JComboBox<String> TextServico;
     private javax.swing.JTextField TextValor;
+    private javax.swing.JButton jButtonVoltar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables

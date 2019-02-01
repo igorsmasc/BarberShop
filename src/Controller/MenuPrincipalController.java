@@ -5,7 +5,6 @@
  */
 package Controller;
 
-import Model.Usuario;
 import View.Agenda;
 import View.Login;
 import View.MenuPrincipal;
