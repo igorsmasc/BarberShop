@@ -8,6 +8,7 @@ package View;
 import Controller.AgendaController;
 import javax.swing.JComboBox;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /**
  *
@@ -106,6 +107,11 @@ public class Agenda extends javax.swing.JFrame {
 
         getContentPane().add(JComboboxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 280, 40));
 
+        JComboboxServico.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                JComboboxServicoItemStateChanged(evt);
+            }
+        });
         getContentPane().add(JComboboxServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 350, 280, 40));
 
         TextValor.setText("0");
@@ -187,6 +193,10 @@ public class Agenda extends javax.swing.JFrame {
         controller.voltarParaMenu();
     }//GEN-LAST:event_jButtonVoltarActionPerformed
 
+    private void JComboboxServicoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_JComboboxServicoItemStateChanged
+      this.controller.atualizaValor();
+    }//GEN-LAST:event_JComboboxServicoItemStateChanged
+
     /**
      * @param args the command line arguments
      */
@@ -251,6 +261,7 @@ public class Agenda extends javax.swing.JFrame {
         this.controller.atualizaTabela();
         this.controller.atualizaCliene();
         this.controller.atualizaServico();
+        this.controller.atualizaValor();
     }
 
     public JTable getTableAgendamentos() {
@@ -276,6 +287,15 @@ public class Agenda extends javax.swing.JFrame {
     public void setJComboboxServico(JComboBox<String> JComboboxServico) {
         this.JComboboxServico = JComboboxServico;
     }
+
+    public JTextField getTextValor() {
+        return TextValor;
+    }
+
+    public void setTextValor(JTextField TextValor) {
+        this.TextValor = TextValor;
+    }
+    
     
     
 }

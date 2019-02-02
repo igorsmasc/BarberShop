@@ -61,6 +61,18 @@ public class AgendaHelper {
         }
     
     }
+
+    public Servico obterSevico() {
+
+        return (Servico)view.getJComboboxServico().getSelectedItem();
+        
+    }
+
+    public void setarValor(float valor) {
+       
+        view.getTextValor().setText(valor+"");
+    
+    }
     
     
 }
