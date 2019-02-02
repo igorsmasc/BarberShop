@@ -67,4 +67,10 @@ public class AgendaController {
         Servico servico = helper.obterSevico();
         helper.setarValor(servico.getValor());
     }
+    
+    public void agendar(){
+        //buscar obj agendamento da tela
+        
+        //Salvar obj no BD
+    }
 }
