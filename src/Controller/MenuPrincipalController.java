@@ -24,6 +24,7 @@ public class MenuPrincipalController {
     public void navegarParaAgenda(){
         Agenda agenda = new Agenda();
         agenda.setVisible(true);
+        view.dispose();
     }
     
     public void logoffUsuario(){
